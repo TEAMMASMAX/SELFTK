@@ -50,7 +50,7 @@ class Commands(object):
 
                 ############## TAGALL - MESSAGE ##############
                 
-            elif opText.startswith("tagall"):
+            elif opText.startswith("แทค"):
                 group=self.laylay.getChats([opTo]).chats[0].extra.groupExtra.memberMids;_mntmd=[]
                 for midss in group:_mntmd.append(midss)
                 _mdmmbrs=_mntmd;_mdslct=len(_mdmmbrs)//20
@@ -114,8 +114,8 @@ class Commands(object):
                 
                 ############## UNSEND - MESSAGE ##############
                 
-            elif opText.startswith('unsend'):
-                args=opText.replace('unsend ','');mes=0
+            elif opText.startswith('ยก'):
+                args=opText.replace('ยก ','');mes=0
                 try:mes=int(args)
                 except:mes=1
                 M=self.laylay.getResend(opTo,101);MId=[]
