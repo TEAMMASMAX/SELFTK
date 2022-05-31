@@ -55,9 +55,9 @@ class Commands(object):
                 for midss in group:_mntmd.append(midss)
                 _mdmmbrs=_mntmd;_mdslct=len(_mdmmbrs)//20
                 for _mntmmbrs in range(_mdslct+1):
-                    ret_='* Mention List *\n';_n=1;_dtmd=[]
+                    ret_='บอทแทคกำลังเริ่มแทค';_n=1;_dtmd=[]
                     for _dtmnt in _mntmd[_mntmmbrs*20:(_mntmmbrs+1)*20]:_dtmd.append(_dtmnt);ret_+='\n\n{}. @!\n'.format(str(_n));_n=_n+1
-                    ret_+='\n\n\n「 Toplam {} Kullanici 」'.format(str(len(_dtmd)));self.laylay.sendMention(opTo,ret_,_dtmd)
+                    ret_+='\n\n\n「 จำนวน {} คน 」'.format(str(len(_dtmd)));self.laylay.sendMention(opTo,ret_,_dtmd)
                 
                 ############## CANCELALL - FUNCTION ##############
                 
@@ -126,7 +126,7 @@ class Commands(object):
                         if len(MId)==mes:break
                 def unsMes(id):self.laylay.unsendMessage(id)
                 for i in MId:thread1=threading.Thread(target=unsMes,args=(i,));thread1.start();thread1.join()
-                self.laylay.sendMessage(opTo,'「 {} message successfully retrieved 」'.format(len(MId)))
+                self.laylay.sendMessage(opTo,'「 {} ยกสำเร็จแล้ว 」'.format(len(MId)))
 
                 
             elif opText.startswith("gkicklist "):
